@@ -1,0 +1,19 @@
+.checklist > li:before {
+    content: "";
+    background-image: url("../images/unchecked.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    padding-left: 20px;
+}
+
+li.checked:before {
+    content: "";
+    background-image: url("../images/checkbox.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+
+ul{
+    list-style-type: none;
+}
