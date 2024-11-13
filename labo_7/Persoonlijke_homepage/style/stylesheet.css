@@ -1,0 +1,65 @@
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #F3F4F6;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3{
+    border-bottom: #007bff solid 2px;
+    padding-bottom: 10px;
+    color: #007bff;
+    width: 90%;
+}
+
+h4{
+    color: #333;
+    text-decoration: underline;
+}
+
+ul{
+    list-style: none;
+}
+
+.background, section p {
+    background-color: white;
+    width: 80%;
+    box-shadow: 5px 5px 5px #E3E3E3;
+    border-radius: 10px;
+    padding: 5px;
+    list-style: none;
+}
+
+.imagestijl {
+    border: 2px solid gray;
+    padding: 10px;
+}
+
+section a{
+    text-decoration: none;
+    color: #007bff;
+}
+
+section a:hover{
+    font-weight: bold;
+}
+
+.checkmark ol > li{
+    list-style-type:"\2713";
+    padding-left: 10px;
+}
+
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
