@@ -45,7 +45,7 @@ section a{
 }
 
 section a:hover{
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 .checkmark ol > li{
@@ -58,8 +58,52 @@ table{
     border-collapse: collapse;
 }
 
-th, td{
+.tabel th, .tabel td{
     border: 1px solid black;
     text-align: center;
     padding: 10px;
+}
+
+
+
+
+.datagrid  {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.datagrid table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+.datagrid table td, .datagrid table th {
+    padding: 10px;
+}
+
+.datagrid table thead th {
+    background: linear-gradient(to bottom, #007BFF 5%, #3E51B5 100%);
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.datagrid table thead th:first-child {
+    border-left: none;
+}
+
+.datagrid table tbody td {
+    color: #00557F;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.datagrid table tbody td:first-child {
+    border-left: none;
+}
+
+.datagrid table tbody tr:last-child td {
+    border-bottom: none;
 }
