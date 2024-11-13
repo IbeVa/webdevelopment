@@ -7,5 +7,4 @@ p > a:before{
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../foto's/link.png");
-    transform: translateY(25%);
 }
