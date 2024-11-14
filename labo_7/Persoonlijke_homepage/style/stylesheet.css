@@ -69,24 +69,25 @@ table{
 
 
 
-.datagrid table {
+.vrienden table {
+    font: normal 12px/150% Geneva, Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     text-align: left;
     width: 100%;
 }
 
-.datagrid {
+.vrienden {
     overflow: hidden;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
 
-.datagrid table td, .datagrid table th {
+.vrienden table td, .datagrid table th {
     padding: 3px 10px;
 }
 
-.datagrid table thead th {
+.vrienden table thead th {
     background: linear-gradient(to bottom, #007BFF 5%, #3E51B5 100%);
     background-color: #007BFF;
     color: #FFFFFF;
@@ -95,30 +96,30 @@ table{
     border-left: 2px solid #0070A8;
 }
 
-.datagrid table thead th:first-child {
+.vrienden table thead th:first-child {
     border: none;
 }
 
-.datagrid table tbody td {
+.vrienden table tbody td {
     color: #00496B;
     border-left: 1px solid #E1EEF4;
     font-size: 12px;
     font-weight: normal;
 }
 
-.datagrid table tbody .alt td {
+.vrienden table tbody .alt td {
     background: #E1EEF4;
     color: #00496B;
 }
 
-.datagrid table tbody td:first-child {
+.vrienden table tbody td:first-child {
     border-left: none;
 }
 
-.datagrid table tbody tr:last-child td {
+.vrienden table tbody tr:last-child td {
     border-bottom: none;
 }
 
-.datagrid table tbody td.onbekend {
-    background-color: rgba(255, 0,0,0.3);
+.onbekend {
+    background-color: red;
 }

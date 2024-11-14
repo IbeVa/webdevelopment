@@ -137,7 +137,7 @@
         </table>
     </section>
     <br>
-    <section class="datagrid">
+    <section class="vrienden">
         <header>
             <h3>Vrienden</h3>
         </header>
@@ -159,12 +159,12 @@
                     <td>Beitem</td>
                     <td>8800</td>
                     <td>0485 97 80 25</td>
-                    <td class="onbekend">onbekend</td>
+                    <td class="onbekend"></td>
                 </tr>
                 <tr class="alt">
                     <td>Elias</td>
                     <td>Vangheluwe</td>
-                    <td class="onbekend">onbekend</td>
+                    <td class="onbekend"></td>
                     <td>8880</td>
                     <td>0457 45 78 45</td>
                     <td><a href="mailto:elias.vangheluwe@gmail.com">elias.vangheluwe@gmail.com</a> </td>
@@ -174,7 +174,7 @@
                     <td>Dewitte</td>
                     <td>Roeselare</td>
                     <td>8800</td>
-                    <td class="onbekend">onbekend</td>
+                    <td class="onbekend"></td>
                     <td><a href="mailto:remi1.dewitte@gmail.com">remi1.dewitte@gmail.com</a> </td>
                 </tr>
                 <tr class="alt">
@@ -182,20 +182,29 @@
                     <td>Miles</td>
                     <td>Roeselare</td>
                     <td>8800</td>
-                    <td class="onbekend">onbekend</td>
+                    <td class="onbekend"></td>
                     <td><a href="mailto:karen.miles@gmail.com">karen.miles@gmail.com</a> </td>
                 </tr>
                 <tr>
                     <td>Oscar</td>
                     <td>Franklin</td>
-                    <td class="onbekend">onbekend</td>
+                    <td class="onbekend"></td>
                     <td>8800</td>
                     <td>0451 84 32 51</td>
                     <td><a href="mailto:oscar.franklin@gmail.com">oscar.franklin@gmail.com</a> </td>
                 </tr>
                 </tbody>
             </table>
+        <p>
+            Niet alle proporties die de generator voorziet is noodzakelijk. Vb: border-shadow kan een visueel effect toevoegen, maar is optioneel en niet noodzakelijk. De tabel blijft nog steeds werken.
+            Ook gebruikt de generator voor bepaalde proporties een browser prefix. Vb: background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #006699), dit is denk ik nog een oude methode. Een betere versie zou dit zijn: background: linear-gradient(to bottom, #007BFF 5%, #3E51B5 100%)
+        </p>
     </section>
+    <section>
+        <h3>Opdracht 3</h3>
+        <p>.vrienden table tbody .alt td -> is veel specifieker dan .onbekend. Dit zorgt ervoor dat de meest specifieke code de minst specifieke code overruled. In chrome dev tool zie je dan ook dat dit doorstreept is.</p>
+    </section>
+    <br>
 </main>
 <footer>
     <p> Klik op <a href ="../../index.html">Go Back</a> om terug te keren naar de hoofdpagina.</p>

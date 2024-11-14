@@ -1,0 +1,38 @@
+table{
+    width: 25%;
+    border-collapse: collapse;
+    border: 3px solid #000;
+}
+
+td, th{
+    border: 1px dotted #000;
+    padding: 5px;
+}
+
+th {
+    text-align: center;
+}
+
+tbody td.vorige-volgende-maand{
+    background-color: lightgray;
+    color: gray;
+}
+
+
+td:first-child, td:last-child{
+    background-color: rgb(255,220,220);
+}
+
+.vrijedag{
+    background-color: rgb(250,120,120);
+}
+
+.maand{
+    background-color: rgb(170,170,200);
+}
+
+
+.dagen{
+    color: rgb(200,190,240);
+    background-color: rgb(35,37,70);
+}
