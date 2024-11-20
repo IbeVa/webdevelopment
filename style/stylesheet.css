@@ -13,8 +13,6 @@ h2{
 body{
     background-color: #F3F4F6;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
 div ul, div ol{
@@ -45,5 +43,8 @@ a:hover{
 nav{
     padding-left: 35px;
 }
+
+
+
 
 
