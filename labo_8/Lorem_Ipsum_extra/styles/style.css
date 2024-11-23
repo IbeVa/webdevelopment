@@ -1,7 +1,9 @@
 
 section{
     display: inline-block;
-    width: 50%;
+    width: calc(50% - 10px);
     border: 1px solid black;
     box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
 }
