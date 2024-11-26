@@ -23,7 +23,7 @@ h2 {
     font-size: 130%;
 }
 
-section{
+div{
     width: 70%;
 }
 
@@ -83,12 +83,12 @@ footer{
     right: 20px;
 }
 
-section li:first-child span{
+div li:first-child span{
     font-weight: bold;
     font-style: normal;
 }
 
-section li:first-child {
+div li:first-child {
     font-style: Italic;
 }
 
