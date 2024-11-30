@@ -39,7 +39,6 @@ aside{
     border: 1px solid #999;
     position: absolute;
     right: 0;
-    opacity: 50%;
 }
 
 aside p{
@@ -64,8 +63,6 @@ main{
     background-color: white;
     color: black;
     text-align: justify;
-    border: black solid 1px;
-
 }
 
 .introduction span{
