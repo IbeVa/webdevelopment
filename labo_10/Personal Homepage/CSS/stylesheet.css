@@ -18,6 +18,15 @@ span{
 }
 
 
+
+section header{
+    margin-top: -5%;
+}
+
+main div{
+    margin-bottom: 5%;
+}
+
 img{
     max-width: 100%;
     height: auto;
@@ -36,7 +45,7 @@ section p{
 }
 
 a{
-    width: 100px;
+    width: 100%;
     display: block;
     text-decoration: none;
     color: gray;
