@@ -17,9 +17,6 @@ span{
     font-weight: bold;
 }
 
-.col-3{
-    padding: 5px 0;
-}
 
 
 section header{
@@ -31,11 +28,13 @@ main div{
 }
 
 img{
-    width: 90%;
+    max-width: 100%;
+    height: auto;
 }
 
 section img{
-    width: 50%;
+    max-width: 50%;
+    height: auto;
     display: block;
     margin: auto;
 }
