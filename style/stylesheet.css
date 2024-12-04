@@ -42,7 +42,7 @@ a:hover{
 nav{
     position: fixed;
     float: left;
-    width: 12%;
+    width: auto;
     background-color: white;
     padding: 0 15px;
     box-shadow: 5px 5px 5px #E3E3E3;
@@ -52,5 +52,20 @@ nav{
 div{
     float:right;
     width: 80%;
-    margin-right: 40px;
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        float: none;
+        position: relative;
+        width: 95%;
+        padding: 10px ;
+        margin: 0 auto;
+    }
+
+    div{
+        float: none;
+        margin: 0 auto;
+
+    }
 }
