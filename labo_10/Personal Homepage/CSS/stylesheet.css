@@ -45,7 +45,7 @@ section p{
 }
 
 a{
-    width: 100%;
+    width: auto;
     display: block;
     text-decoration: none;
     color: gray;
