@@ -2,7 +2,7 @@
     background-color: gray;
 }
 
-.container-fluid {
+.container-fluid, footer {
     box-sizing: border-box;
 }
 
