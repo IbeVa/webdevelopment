@@ -40,7 +40,7 @@ div{
 
 #e{
     border: solid black;
-    border-width: 7.5px 0 7.5px 7.5px;
+    border-width: 7.5px 7.5px 0 7.5px;
     min-height: 150px;
     background: rgb(255, 255, 255);
 }
