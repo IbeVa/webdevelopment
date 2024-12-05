@@ -2,3 +2,7 @@
     background: gray;
 }
 
+.container-fluid {
+    box-sizing: border-box;
+}
+

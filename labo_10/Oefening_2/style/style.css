@@ -1,3 +1,8 @@
 .row  div:nth-child(2n) {
     background-color: gray;
 }
+
+.container-fluid {
+    box-sizing: border-box;
+}
+
