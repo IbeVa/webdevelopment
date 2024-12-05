@@ -13,7 +13,7 @@ h2{
 body{
     background-color: #F3F4F6;
     font-family: Arial, sans-serif;
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -39,33 +39,27 @@ a:hover{
     text-decoration: underline;
 }
 
-nav{
-    position: fixed;
-    float: left;
-    width: auto;
-    background-color: white;
-    padding: 0 15px;
-    box-shadow: 5px 5px 5px #E3E3E3;
-    border-radius: 10px;
+nav ol, nav li{
+    list-style: none;
 }
 
-div{
-    float:right;
-    width: 80%;
+
+div, nav{
+    width: 90%;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (min-width: 768px){
     nav{
-        float: none;
-        position: relative;
-        width: 95%;
-        padding: 10px ;
-        margin: 0 auto;
+        position: fixed;
+        float: left;
+        padding: 0 15px;
+        left: 0;
+        width: 20%;
     }
 
     div{
-        float: none;
-        margin: 0 auto;
-
+        float:right;
+        width: 75%;
     }
+
 }

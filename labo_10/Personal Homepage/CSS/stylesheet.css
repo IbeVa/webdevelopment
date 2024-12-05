@@ -1,4 +1,4 @@
-.container-fluid {
+.container {
     box-sizing: border-box;
 }
 
@@ -15,6 +15,12 @@ main{
 h1, h2{
     text-align: center;
     text-decoration: underline;
+}
+
+h3{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 span{
@@ -40,7 +46,7 @@ section img{
     max-width: 50%;
     height: auto;
     display: block;
-    margin: auto;
+    margin: 0 auto;
 }
 
 section p{
@@ -48,8 +54,8 @@ section p{
     text-align: justify;
 }
 
-a{
-    width: auto;
+div a{
+    width: 150px;
     display: block;
     text-decoration: none;
     color: gray;
@@ -62,4 +68,17 @@ a{
 
 a:hover{
     color: blue;
+}
+
+figure img{
+    display: inline-block;
+    width: 47%;
+}
+
+figure {
+    text-align: center;
+}
+
+footer{
+    padding-bottom: 5%;
 }
