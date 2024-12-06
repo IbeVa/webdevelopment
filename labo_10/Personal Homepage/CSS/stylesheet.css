@@ -68,3 +68,7 @@ figure {
 footer{
     padding-bottom: 5%;
 }
+
+.container-fluid{
+    box-sizing: border-box;
+}
