@@ -55,6 +55,22 @@ nav ol, nav li{
     width: 90%;
 }
 
+.Home{
+    background-color: #FF4040;
+    width: 20%;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.Home a{
+    color: white;
+}
+
+.nav-semester2{
+
+}
+
 @media screen and (min-width: 768px){
 
     .grid-container{
