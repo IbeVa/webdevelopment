@@ -1,0 +1,9 @@
+table, th, td{
+    border: 1px solid black;
+}
+
+body > input:last-of-type{
+    margin-top: 10px;
+}
+
+

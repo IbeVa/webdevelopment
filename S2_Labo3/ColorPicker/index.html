@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/stylesheet.css">
+    <title>Color Picker</title>
+</head>
+<body>
+
+<div class="flex-container">
+    <div class="flex-container2">
+        <div class="slider-container">
+            <div>
+                <span>0</span>
+                <input type="range" id="slider1" name="slider" value="128" min="0" max="255">
+                <span>255</span>
+            </div>
+            <span id="red">Red: </span>
+        </div>
+        <div class="slider-container">
+            <div>
+                <span>0</span>
+                <input type="range" id="slider2" name="slider" value="128" min="0" max="255">
+                <span>255</span>
+            </div>
+            <span id="green">Green: </span>
+        </div>
+        <div class="slider-container">
+            <div>
+                <span>0</span>
+                <input type="range" id="slider3" name="slider" value="128" min="0" max="255">
+                <span>255</span>
+            </div>
+            <span id="blue">Blue: </span>
+
+        </div>
+    </div>
+    <div id="colorDemo"></div>
+</div>
+
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

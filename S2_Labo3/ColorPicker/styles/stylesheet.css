@@ -1,0 +1,47 @@
+
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    border: grey 2px solid;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 20px;
+
+}
+
+
+
+.slider-container span:nth-last-child(2){
+    margin-right: 20px;
+}
+
+
+.slider-container>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+
+}
+
+.slider-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px
+}
+
+#colorDemo {
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    border-radius: 10px;
+}
