@@ -1,0 +1,13 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto 85%;
+    margin-bottom: 10px;
+}
+
+#buurlanden{
+    width: 10%;
+}
+
+#bestelling{
+    width: 12%;
+}

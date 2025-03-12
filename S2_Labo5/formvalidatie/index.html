@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Oefening</title> 
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body> 
+
+	<form>
+		<div class="line">
+			<label for="txtVoornaam">Voornaam</label>
+			<input type="text" name="Voornaam" id="txtVoornaam" placeholder="Ibe">
+			<span class="errorMessage" id="errVoornaam"></span>
+		</div>
+		<div>
+			<label for="txtFamilienaam">Familienaam</label>
+			<input type="text" name="Familienaam" id="txtFamilienaam" placeholder="Vangheluwe">
+			<span class="errorMessage" id="errFamilienaam"></span>
+		</div>
+		<div>
+			<label for="geboortedatum">Geboortedatum</label>
+			<input type="text" name="geboortedatum" id="geboortedatum" placeholder="jjjj-mm-dd">
+			<span class="errorMessage" id="errGeboortedatum"></span>
+		</div>
+		<div>
+			<label for="txtEmail">Email</label>
+			<input type="text" name="email" id="txtEmail" placeholder="example@gmail.com">
+			<span class="errorMessage" id="errEmail"></span>
+		</div>
+		<div>
+			<label for="txtAantal">Aantal kinderen</label>
+			<input type="text" name="aantal" id="txtAantal" placeholder="2">
+			<span class="errorMessage" id="errAantal"></span>
+		</div>
+		<input type="button" id="btnValideer" value="Valideer" />
+	</form>
+	<script src="scripts/code.js"></script>
+</body> 
+</html> 

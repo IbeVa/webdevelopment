@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Opdracht formwaarden</title>
+    <link rel="stylesheet" href="stylesheet/stylesheet.css">
+</head>
+<body>
+<h1>Opdracht formwaarden</h1>
+<form method="post">
+    <div class="grid-container">
+        <label for="isRoker">Is roker</label>
+        <div>
+            <input type="checkbox" id="isRoker" name="isRoker">
+        </div>
+    </div>
+    <div class="grid-container">
+        <span>Moedertaal</span>
+        <div>
+            <input type="radio" name="language" id="Nederlands" value="nl">
+            <label for="Nederlands">Nederlands</label>
+            <input type="radio" name="language" id="Frans" value="fr">
+            <label for="Frans">Frans</label>
+            <input type="radio" name="language" id="Engels" value="en">
+            <label for="Engels">Engels</label>
+        </div>
+    </div>
+    <div class="grid-container">
+        <label for="buurlanden">Favoriete buurland</label>
+        <select name="buurlanden" id="buurlanden">
+            <option value="Frankrijk">Frankrijk</option>
+            <option value="Duitsland">Duitsland</option>
+            <option value="Nederland">Nederland</option>
+        </select>
+    </div>
+    <div class="grid-container">
+        <label for="bestelling">Bestelling</label>
+        <select name="bestelling" id="bestelling" multiple>
+            <option value="aardappelen">aardappelen</option>
+            <option value="brood">brood</option>
+            <option value="melk">melk</option>
+            <option value="biefstuk">biefstuk</option>
+            <option value="chips">chips</option>
+            <option value="krant">krant</option>
+        </select>
+    </div>
+
+    <input type="button" value="Toon resultaat" id="btn">
+</form>
+<script src="scripts/main.js"></script>
+</body>
+</html>
