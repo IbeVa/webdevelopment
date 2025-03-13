@@ -88,7 +88,7 @@ const valideerEmail = () => {
         txtEmail.className = "invalid";
         errMessage.textContent = "Verplicht veld";
         return false;
-    }
+    }   
 
     if(patroon.test(email)){
         txtEmail.className = "";
