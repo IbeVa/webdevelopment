@@ -21,11 +21,11 @@ const valideerVoornaam = () => {
     let voornaam = txtVoornaam.value.trim();
     if (voornaam.length > 30) {
         txtVoornaam.className = "invalid"; // invalid class instellen
-        errVoornaam.innerHTML = "max. 30 karakters";
+        errVoornaam.textContent = "max. 30 karakters";
         return false;
     } else {
         txtVoornaam.className = ""; // alle classes verwijderen
-        errVoornaam.innerHTML = "";
+        errVoornaam.textContent = "";
     }
 
     return true;
