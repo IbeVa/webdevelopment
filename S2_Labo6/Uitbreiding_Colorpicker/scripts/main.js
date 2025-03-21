@@ -21,9 +21,9 @@ const slider = () =>{
     let green = document.getElementById("green");
     let blue = document.getElementById("blue");
 
-    red.innerHTML = "Red: " + sliders[0].value;
-    green.innerHTML = "Green: " + sliders[1].value;
-    blue.innerHTML = "Blue: " + sliders[2].value;
+    red.textContent = "Red: " + sliders[0].value;
+    green.textContent = "Green: " + sliders[1].value;
+    blue.textContent = "Blue: " + sliders[2].value;
 
 
 }
