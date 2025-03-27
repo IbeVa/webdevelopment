@@ -44,8 +44,8 @@ const save = () =>{
         createBtn.className = "button";
         createElementDIV.appendChild(createBtn);
 
-        createBtn.addEventListener("click", removeButton);
-        createElementDIV.addEventListener("click", color);
+        createBtn.addEventListener("click", removeButton, false);
+        createElementDIV.addEventListener("click", color, false);
 }
 
 const removeButton = (event) =>{
@@ -62,11 +62,10 @@ const color = (event) =>{
     for(let i = 0; i < values.length; i++){
         values[i] = parseInt(values[i].trim());
     }
-
+    
     sliders[0].value = values[0];
     sliders[1].value = values[1];
     sliders[2].value = values[2];
 
     slider();
-
 }
