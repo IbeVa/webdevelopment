@@ -30,8 +30,7 @@ const willekeurigeVolgorde = () => {
     }
 
     console.log(dubbelAfbeeldingen)
-
-
+    
     let divElement = document.getElementById("afbeelding");
     divElement.textContent = "";
     global.removed_cards = 0;
