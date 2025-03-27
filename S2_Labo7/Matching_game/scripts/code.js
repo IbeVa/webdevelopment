@@ -76,7 +76,7 @@ const controleerTweeKaarten = () => {
     } else {
         if (global.FLIPPED_CARDS.length === 2) {
 
-            global.timeoutId = setTimeout(unflip, 2000);
+            global.timeoutId = setTimeout(unflip, 1500);
         }
     }
 }
@@ -104,6 +104,7 @@ const removeCard = () => {
     let correctAudo = document.getElementById("correct");
     correctAudo.play();
     let divElement = document.getElementById("afbeelding");
+    let partyhorn = document.getElementById("partyhorn");
     let cardElementen = divElement.children;
     let card1 = global.FLIPPED_CARDS[0];
     for (let i = 0; i < cardElementen.length; i++) {
@@ -117,6 +118,7 @@ const removeCard = () => {
     global.FLIPPED_CARDS = [];
 
     if (global.removed_cards === 12) {
+        partyhorn.play();
         window.alert("Gefeliceerd!");
         location.reload();
     }
