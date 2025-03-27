@@ -34,6 +34,7 @@ const willekeurigeVolgorde = () => {
 
     let divElement = document.getElementById("afbeelding");
     divElement.innerHTML = "";
+    global.removed_cards = 0;
 
     for (let i = 0; i < dubbelAfbeeldingen.length; i++) {
         let randomGetal = Math.random() * dubbelAfbeeldingen.length;
@@ -148,7 +149,7 @@ const removeCard = () => {
 
     if (global.removed_cards === global.AANTAL_KAARTEN*global.AANTAL_GELIJKE_KAARTEN) {
         partyhorn.play();
-        window.alert("Gefeliceerd!");
+        window.alert("Gefeliciteerd!");
         location.reload();
     }
 
