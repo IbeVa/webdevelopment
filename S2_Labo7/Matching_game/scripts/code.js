@@ -35,6 +35,7 @@ const willekeurigeVolgorde = () => {
     let divElement = document.getElementById("afbeelding");
     divElement.textContent = "";
     global.removed_cards = 0;
+    global.FLIPPED_CARDS = [];
 
     for (let i = 0; i < dubbelAfbeeldingen.length; i++) {
         let randomGetal = Math.random() * dubbelAfbeeldingen.length;
