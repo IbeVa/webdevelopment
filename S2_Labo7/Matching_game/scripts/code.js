@@ -6,9 +6,12 @@ let global = {
     timeoutId: 0,
     FLIPPED_CARDS: [],
     removed_cards: 0,
+    AANTAL_GELIJKE_KAARTEN: 2
 }
 
 const setup = () => {
+    let aantalGelijkeKaarten = document.getElementById("aantalGelijkeKaarten");
+    aantalGelijkeKaarten.addEventListener("input", willekeurigeVolgorde);
     willekeurigeVolgorde();
 }
 window.addEventListener("load", setup);
@@ -16,9 +19,21 @@ window.addEventListener("load", setup);
 const willekeurigeVolgorde = () => {
     const afbeeldingen = ["kaart1.png", "kaart2.png", "kaart3.png", "kaart4.png", "kaart5.png", "kaart6.png"]
     let achterKant = "achterkant.png"
-    const dubbelAfbeeldingen = [...afbeeldingen, ...afbeeldingen];
+
+    let aantalGelijkeKaarten = document.getElementById("aantalGelijkeKaarten").value;
+    global.AANTAL_GELIJKE_KAARTEN = parseInt(aantalGelijkeKaarten);
+
+    let aantalGelijke = global.AANTAL_GELIJKE_KAARTEN;
+    const dubbelAfbeeldingen = [];
+    for(let i = 0; i < aantalGelijke; i++){
+        dubbelAfbeeldingen.push(...afbeeldingen);
+    }
+
+    console.log(dubbelAfbeeldingen)
+
 
     let divElement = document.getElementById("afbeelding");
+    divElement.innerHTML = "";
 
     for (let i = 0; i < dubbelAfbeeldingen.length; i++) {
         let randomGetal = Math.random() * dubbelAfbeeldingen.length;
@@ -56,39 +71,51 @@ const willekeurigeVolgorde = () => {
 const flip_card = (event) => {
     let audio = document.getElementById("mijnAudio");
 
-    if (global.FLIPPED_CARDS.length < 2) {
+    if (global.FLIPPED_CARDS.length < global.AANTAL_GELIJKE_KAARTEN) {
         audio.play();
         event.target.parentElement.classList.remove("unflip-card");
         event.target.parentElement.classList.add("flip-card");
         global.FLIPPED_CARDS.push(event.target.parentElement.children[0].getAttribute("src"));
-        controleerTweeKaarten();
+        controleerKaarten();
     }
 }
 
 
-const controleerTweeKaarten = () => {
-    let card1 = global.FLIPPED_CARDS[0];
-    let card2 = global.FLIPPED_CARDS[1];
+const controleerKaarten = () => {
 
-    if (card1 === card2) {
-        global.timeoutId = setTimeout(removeCard, 1000);
+    if(global.FLIPPED_CARDS.length === global.AANTAL_GELIJKE_KAARTEN) {
 
-    } else {
-        if (global.FLIPPED_CARDS.length === 2) {
+        let allemaalGelijk = true;
+        let i = 1;
+        while (allemaalGelijk && i < global.FLIPPED_CARDS.length) {
+            if (global.FLIPPED_CARDS[0] !== global.FLIPPED_CARDS[i]) {
+                allemaalGelijk = false;
 
-            global.timeoutId = setTimeout(unflip, 1500);
+            }
+            i++;
+        }
+
+
+        if (allemaalGelijk === true) {
+            global.timeoutId = setTimeout(removeCard, 1000);
+
+        } else {
+            if (global.FLIPPED_CARDS.length === global.AANTAL_GELIJKE_KAARTEN) {
+
+                global.timeoutId = setTimeout(unflip, 1500);
+            }
         }
     }
+
 }
 
 const unflip = () => {
     let errorAudio = document.getElementById("error");
     let divElement = document.getElementById("afbeelding");
     let cardElementen = divElement.children;
-    if (global.FLIPPED_CARDS.length === 2) {
+    if (global.FLIPPED_CARDS.length === global.AANTAL_GELIJKE_KAARTEN) {
         for (let i = 0; i < cardElementen.length; i++) {
-            if (cardElementen[i].children[0].getAttribute("src") === global.FLIPPED_CARDS[0] ||
-                cardElementen[i].children[0].getAttribute("src") === global.FLIPPED_CARDS[1]) {
+            if (cardElementen[i].getAttribute("class") === "card flip-card") {
                 cardElementen[i].classList.remove("flip-card");
                 errorAudio.play();
                 cardElementen[i].classList.add("unflip-card");
@@ -110,6 +137,8 @@ const removeCard = () => {
     for (let i = 0; i < cardElementen.length; i++) {
         if (cardElementen[i].children[0].getAttribute("src") === card1) {
             cardElementen[i].children[0].remove();
+            cardElementen[i].classList.remove("flip-card");
+            cardElementen[i].children[0].classList.add("noDisplay");
             global.removed_cards++;
 
         }
@@ -117,7 +146,7 @@ const removeCard = () => {
     clearTimeout(global.timeoutId);
     global.FLIPPED_CARDS = [];
 
-    if (global.removed_cards === 12) {
+    if (global.removed_cards === global.AANTAL_KAARTEN*global.AANTAL_GELIJKE_KAARTEN) {
         partyhorn.play();
         window.alert("Gefeliceerd!");
         location.reload();
