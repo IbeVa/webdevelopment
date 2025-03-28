@@ -76,6 +76,7 @@ const flip_card = (event) => {
     if (global.FLIPPED_CARDS.length < global.AANTAL_GELIJKE_KAARTEN) {
         audio.play();
         event.target.parentElement.classList.remove("unflip-card");
+        event.target.parentElement.children[0].classList.remove("border");
         event.target.parentElement.classList.add("flip-card");
         global.FLIPPED_CARDS.push(event.target.parentElement.children[0].getAttribute("src"));
         controleerKaarten();
@@ -119,6 +120,7 @@ const unflip = () => {
         for (let i = 0; i < cardElementen.length; i++) {
             if (cardElementen[i].getAttribute("class") === "card flip-card") {
                 cardElementen[i].classList.remove("flip-card");
+                cardElementen[i].children[0].classList.add("border");
                 errorAudio.play();
                 cardElementen[i].classList.add("unflip-card");
 
@@ -155,4 +157,6 @@ const removeCard = () => {
     }
 
 }
+
+
 
