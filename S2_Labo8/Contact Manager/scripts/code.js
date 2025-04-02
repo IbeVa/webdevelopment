@@ -70,11 +70,12 @@ const bewaarBewerktePersoon = () => {
             personen[index].geboorteDatum = geboorte;
             list.options[index].textContent = voornaam + " " + familienaam;
             list.options.selectedIndex = -1;
+            index = -1;
             bewerkNieuwePersoon();
         }
     }
 
-    index = -1;
+
     // een nieuw aangemaakte persoon voegen we toe
     // een bestaande persoon in de lijst passen we aan
     // zorg ervoor dat de naam en voornaam ook aangepast en/of zichtbaar zijn in de lijst na updaten
@@ -98,6 +99,7 @@ const aanpassenPersoon = (event) =>{
 // Event listener (btnNieuw click)
 const bewerkNieuwePersoon = () => {
     console.log("Klik op de knop nieuw");
+    let list = document.getElementById("lstPersonen");
 
     // Zet de user interface klaar om de gegevens van een nieuwe persoon in te voeren
     document.getElementById("txtVoornaam").value = "";
@@ -105,6 +107,8 @@ const bewerkNieuwePersoon = () => {
     document.getElementById("txtEmail").value = "";
     document.getElementById("txtAantalKinderen").value = "";
     document.getElementById("txtGeboorteDatum").value = "";
+    list.options.selectedIndex = -1;
+    index = -1;
 };
 
 const removePersoon = () =>{
