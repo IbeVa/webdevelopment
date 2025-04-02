@@ -14,3 +14,7 @@ form label {
 #lstPersonen {
 	width:400px;
 }
+
+input[type="button"]{
+	margin-top: 10px;
+}
