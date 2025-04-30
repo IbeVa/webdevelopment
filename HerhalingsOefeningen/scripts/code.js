@@ -20,13 +20,21 @@ const setup = () => {
 
     let searchBtn = document.getElementById("goBtn");
     searchBtn.addEventListener("click", goButton)
+    let cmdInput = document.getElementById("cmdInput");
+    cmdInput.addEventListener("keypress", keyPress);
 
 
 }
 window.addEventListener("load", setup);
 
+const keyPress = (event) =>{
+    if(event.key === "Enter"){
+        goButton();
+    }
+}
 
 const goButton = () =>{
+
     let cmdInput = document.getElementById("cmdInput").value;
     let cmdInputTrim = cmdInput.trim();
     let cmdArray = cmdInputTrim.split(" ");
