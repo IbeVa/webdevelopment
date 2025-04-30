@@ -93,11 +93,13 @@ const createCard = (h) =>{
     let pElement = document.createElement("p");
     let aElement = document.createElement("a");
     let button = document.createElement("button");
+    let h3andPContainer = document.createElement("div");
     button.textContent = "X"
     button.classList.add("deleteCross")
 
     divElement.setAttribute("data-id", h.data_id);
     divElement.classList.add(h.titel.toLowerCase());
+    divElement.classList.add("card-container")
 
     aElement.href = h.url;
     aElement.textContent = "GO!";
@@ -105,8 +107,9 @@ const createCard = (h) =>{
     pElement.textContent = h.text;
 
     parentDiv.appendChild(divElement);
-    divElement.appendChild(h3Element);
-    divElement.appendChild(pElement);
+    divElement.appendChild(h3andPContainer);
+    h3andPContainer.appendChild(h3Element);
+    h3andPContainer.appendChild(pElement);
     divElement.appendChild(aElement);
     divElement.appendChild(button);
 
